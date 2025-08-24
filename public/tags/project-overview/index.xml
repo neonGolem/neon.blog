@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Project Overview on neon.Golem</title><link>/tags/project-overview/</link><description>Recent content in Project Overview on neon.Golem</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 08 Jul 2025 14:10:36 +0300</lastBuildDate><atom:link href="/tags/project-overview/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello, neon.Volt.</title><link>/posts/hello-neon-volt/</link><pubDate>Tue, 08 Jul 2025 14:10:36 +0300</pubDate><guid>/posts/hello-neon-volt/</guid><description>&lt;h1 id="neonvolt-what">neon.Volt? What?&lt;/h1>
+&lt;p>It&amp;rsquo;s a smart power supply that runs off of USB-C, utilises the rev 2 power
+delivery spec and is configurable over UART, but also comes with a physical UI so it&amp;rsquo;s
+usable as a standalone unit. It is my intent to share this design, so I will probably put it
+out there under GPL or something. At the time of me writing this, i&amp;rsquo;m still
+in the middle of finalizing the system design, but I have enough stuff on there that
+the code for this project is going to keep me busy for a while - even if I vibe code
+parts of it. &lt;em>Especially&lt;/em> if i vibe code it. The short spec sheet is as follows: 100W, 98.5% efficient, 10mV adjustment
+steps, controllable via UART. The reality of the situation though, is
+that I will not be able to guarantee that efficiency and the converter will probably not be
+that precise, especially with cheap leads and high currents. I can&amp;rsquo;t foresee everything that will go wrong with it.
+There&amp;rsquo;s been feature creep. What started out with me adding
+hardware to meet the system specification ended up being &amp;ldquo;hey, if i&amp;rsquo;m doing this anyway,
+I might as well do more of the same&amp;rdquo; and that&amp;rsquo;s how I arrived at a full 16 bit
+user addressable terminal block, a user accessible ADC pin, a dedicated 3V3 rail and an adjustable output of
+1 to 30 volts, a color 320x240 screen and enough flash memory to comfortably run Doom on this thing.&lt;/p></description></item></channel></rss>

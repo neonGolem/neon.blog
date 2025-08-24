@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debugger on neon.Golem</title>
+    <link>//localhost:1313/tags/debugger/</link>
+    <description>Recent content in Debugger on neon.Golem</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="//localhost:1313/tags/debugger/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>neon.Tap</title>
+      <link>//localhost:1313/showcase/neon.tap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/showcase/neon.tap/</guid>
+      <description>&lt;p&gt;I want a picoprobe, because it&amp;rsquo;s a good all-round debugger. I often need to program I2C and SPI devices. I need JTAG at work. I want them in a single pocketable device. I&amp;rsquo;ve been playing with a very basic logic analyzer, it just gives you the bitstream it reads - occasionally quite useful. The way I imagine doing this is to just roll the different firmware files into one and save them in flash, then write a custom bootloader that jumps to a specific memory address based on the selected detent on the rotary dial. Electronics wise it&amp;rsquo;s very simple, we need a dial, an MCU, a flash chip, an LDO or a simple switcher and some output pins.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

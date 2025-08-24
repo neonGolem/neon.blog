@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Robotics on neon.Golem</title>
+    <link>//localhost:1313/tags/robotics/</link>
+    <description>Recent content in Robotics on neon.Golem</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="//localhost:1313/tags/robotics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>neon.Prime</title>
+      <link>//localhost:1313/showcase/neon.prime/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/showcase/neon.prime/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s the first robot. I needed a project for school, I also wanted a pick and place and I really wanted to play with inverse kinematics. Prime is a SCARA arm and with any luck, I&amp;rsquo;ll get it to do 0.1mm precision with both speed and power.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

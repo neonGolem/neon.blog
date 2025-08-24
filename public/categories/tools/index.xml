@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on neon.Golem</title>
+    <link>//localhost:1313/categories/tools/</link>
+    <description>Recent content in Tools on neon.Golem</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Jul 2025 14:10:36 +0300</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, neon.Volt.</title>
+      <link>//localhost:1313/posts/hello-neon-volt/</link>
+      <pubDate>Tue, 08 Jul 2025 14:10:36 +0300</pubDate>
+      <guid>//localhost:1313/posts/hello-neon-volt/</guid>
+      <description>&lt;h2 id=&#34;neonvolt-what&#34;&gt;neon.Volt? What?&lt;/h2&gt;&#xA;&lt;p&gt;It&amp;rsquo;s a smart power supply that runs off of USB-C, utilises the rev 2 power&#xA;delivery spec and is configurable over UART, but also comes with a physical UI so it&amp;rsquo;s&#xA;usable as a standalone unit. It is my intent to share this design, so I will probably put it&#xA;out there under GPL or something. At the time of me writing this, i&amp;rsquo;m still&#xA;in the middle of finalizing the system design, but I have enough stuff on there that&#xA;the code for this project is going to keep me busy for a while - even if I vibe code&#xA;parts of it. &lt;em&gt;Especially&lt;/em&gt; if i vibe code it.  The short spec sheet is as follows: 100W, 98.5% efficient, 10mV adjustment&#xA;steps, controllable via UART. The reality of the situation though, is&#xA;that I will not be able to guarantee that efficiency and the converter will probably not be&#xA;that precise, especially with cheap leads and high currents. I can&amp;rsquo;t foresee everything that will go wrong with it.&#xA;There&amp;rsquo;s been feature creep. What started out with me adding&#xA;hardware to meet the system specification ended up being &amp;ldquo;hey, if i&amp;rsquo;m doing this anyway,&#xA;I might as well do more of the same&amp;rdquo; and that&amp;rsquo;s how I arrived at a full 16 bit&#xA;user addressable terminal block, a user accessible ADC pin, a dedicated 3V3 rail and an adjustable output of&#xA;1 to 30 volts, a color 320x240 screen and enough flash memory to comfortably run Doom on this thing.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
