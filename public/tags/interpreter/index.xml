@@ -1,1 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Interpreter on neon.Golem</title><link>/tags/interpreter/</link><description>Recent content in Interpreter on neon.Golem</description><generator>Hugo</generator><language>en</language><atom:link href="/tags/interpreter/index.xml" rel="self" type="application/rss+xml"/><item><title>volt.OS</title><link>/showcase/volt.os/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/showcase/volt.os/</guid><description>&lt;p>The firmware for the power supply is going to be fairly complex in the sense that I have a lot of features on the board. The main issue is the user addressable IO and ADC pin. A custom interpreter is the way to go here, but I have no good idea on how to even approach this.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interpreter on neon.Golem</title>
+    <link>//localhost:1313/tags/interpreter/</link>
+    <description>Recent content in Interpreter on neon.Golem</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="//localhost:1313/tags/interpreter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>volt.OS</title>
+      <link>//localhost:1313/showcase/volt.os/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/showcase/volt.os/</guid>
+      <description>&lt;p&gt;The firmware for the power supply is going to be fairly complex in the sense that I have a lot of features on the board. The main issue is the user addressable IO and ADC pin. A custom interpreter is the way to go here, but I have no good idea on how to even approach this.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

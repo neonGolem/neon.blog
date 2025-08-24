@@ -78,7 +78,7 @@ pagination.pagerSize = 5
     title = "neon.Golem"
 
     [languages.en.params]
-      subtitle = "A simple, retro theme for Hugo"
+      subtitle = "Open source hardware and ramblings."
       owner = ""
       keywords = ""
       copyright = ""

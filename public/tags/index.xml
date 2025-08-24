@@ -1,1 +1,103 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on neon.Golem</title><link>/tags/</link><description>Recent content in Tags on neon.Golem</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 08 Jul 2025 14:10:36 +0300</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Neon.Volt</title><link>/tags/neon.volt/</link><pubDate>Tue, 08 Jul 2025 14:10:36 +0300</pubDate><guid>/tags/neon.volt/</guid><description/></item><item><title>Project Overview</title><link>/tags/project-overview/</link><pubDate>Tue, 08 Jul 2025 14:10:36 +0300</pubDate><guid>/tags/project-overview/</guid><description/></item><item><title>System Design</title><link>/tags/system-design/</link><pubDate>Tue, 08 Jul 2025 14:10:36 +0300</pubDate><guid>/tags/system-design/</guid><description/></item><item><title>ARM</title><link>/tags/arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tags/arm/</guid><description/></item><item><title>C/C++</title><link>/tags/c/c++/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tags/c/c++/</guid><description/></item><item><title>Firmware</title><link>/tags/firmware/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tags/firmware/</guid><description/></item><item><title>Interpreter</title><link>/tags/interpreter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tags/interpreter/</guid><description/></item><item><title>Power Design</title><link>/tags/power-design/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tags/power-design/</guid><description/></item><item><title>Power Electronics</title><link>/tags/power-electronics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tags/power-electronics/</guid><description/></item><item><title>Power Supply</title><link>/tags/power-supply/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tags/power-supply/</guid><description/></item><item><title>Programmable</title><link>/tags/programmable/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tags/programmable/</guid><description/></item><item><title>RP2040</title><link>/tags/rp2040/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tags/rp2040/</guid><description/></item><item><title>Tools</title><link>/tags/tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tags/tools/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on neon.Golem</title>
+    <link>//localhost:1313/tags/</link>
+    <description>Recent content in Tags on neon.Golem</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Jul 2025 14:10:36 +0300</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neon.Volt</title>
+      <link>//localhost:1313/tags/neon.volt/</link>
+      <pubDate>Tue, 08 Jul 2025 14:10:36 +0300</pubDate>
+      <guid>//localhost:1313/tags/neon.volt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Project Overview</title>
+      <link>//localhost:1313/tags/project-overview/</link>
+      <pubDate>Tue, 08 Jul 2025 14:10:36 +0300</pubDate>
+      <guid>//localhost:1313/tags/project-overview/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>System Design</title>
+      <link>//localhost:1313/tags/system-design/</link>
+      <pubDate>Tue, 08 Jul 2025 14:10:36 +0300</pubDate>
+      <guid>//localhost:1313/tags/system-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ARM</title>
+      <link>//localhost:1313/tags/arm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/arm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C/C&#43;&#43;</title>
+      <link>//localhost:1313/tags/c/c&#43;&#43;/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/c/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Firmware</title>
+      <link>//localhost:1313/tags/firmware/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/firmware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interpreter</title>
+      <link>//localhost:1313/tags/interpreter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/interpreter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Power Design</title>
+      <link>//localhost:1313/tags/power-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/power-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Power Electronics</title>
+      <link>//localhost:1313/tags/power-electronics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/power-electronics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Power Supply</title>
+      <link>//localhost:1313/tags/power-supply/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/power-supply/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programmable</title>
+      <link>//localhost:1313/tags/programmable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/programmable/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RP2040</title>
+      <link>//localhost:1313/tags/rp2040/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/rp2040/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>//localhost:1313/tags/tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/tools/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

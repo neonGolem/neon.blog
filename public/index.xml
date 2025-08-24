@@ -1,19 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>neon.Golem</title><link>/</link><description>Recent content on neon.Golem</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 08 Jul 2025 14:10:36 +0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello, neon.Volt.</title><link>/posts/hello-neon-volt/</link><pubDate>Tue, 08 Jul 2025 14:10:36 +0300</pubDate><guid>/posts/hello-neon-volt/</guid><description>&lt;h1 id="neonvolt-what">neon.Volt? What?&lt;/h1>
-&lt;p>It&amp;rsquo;s a smart power supply that runs off of USB-C, utilises the rev 2 power
-delivery spec and is configurable over UART, but also comes with a physical UI so it&amp;rsquo;s
-usable as a standalone unit. It is my intent to share this design, so I will probably put it
-out there under GPL or something. At the time of me writing this, i&amp;rsquo;m still
-in the middle of finalizing the system design, but I have enough stuff on there that
-the code for this project is going to keep me busy for a while - even if I vibe code
-parts of it. &lt;em>Especially&lt;/em> if i vibe code it. The short spec sheet is as follows: 100W, 98.5% efficient, 10mV adjustment
-steps, controllable via UART. The reality of the situation though, is
-that I will not be able to guarantee that efficiency and the converter will probably not be
-that precise, especially with cheap leads and high currents. I can&amp;rsquo;t foresee everything that will go wrong with it.
-There&amp;rsquo;s been feature creep. What started out with me adding
-hardware to meet the system specification ended up being &amp;ldquo;hey, if i&amp;rsquo;m doing this anyway,
-I might as well do more of the same&amp;rdquo; and that&amp;rsquo;s how I arrived at a full 16 bit
-user addressable terminal block, a user accessible ADC pin, a dedicated 3V3 rail and an adjustable output of
-1 to 30 volts, a color 320x240 screen and enough flash memory to comfortably run Doom on this thing.&lt;/p></description></item><item><title>About</title><link>/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/about/</guid><description>&lt;p>I&amp;rsquo;m an electronics engineer with high functioning ADHD and probably some form of autism. This is my project porfolio, not really sure how far I&amp;rsquo;m willing to take it, but right now I feel like I want an outlet like this and I bought the .com so ehh, fuck it.&lt;/p>
-&lt;p>The blog is made in hugo and hosted by cloudflare, the template/theme is Terminal and I&amp;rsquo;ve left much of the references to the original author in place to give credit.&lt;/p></description></item><item><title>neon.Volt</title><link>/showcase/neon.volt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/showcase/neon.volt/</guid><description>&lt;p>You need good lab tools. Good tools are expensive. So we approach the problem the maker way and we create the tools that we need. It&amp;rsquo;s a smart power supply built around the USB-C PD spec and a buck-boost switcher.&lt;/p>
-&lt;p>Relevant posts:&lt;/p>
-&lt;p>   (07.08.2025) &lt;a href="/posts/hello-neon-volt/">Hello, neon.Volt.&lt;/a>&lt;/p></description></item><item><title>volt.OS</title><link>/showcase/volt.os/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/showcase/volt.os/</guid><description>&lt;p>The firmware for the power supply is going to be fairly complex in the sense that I have a lot of features on the board. The main issue is the user addressable IO and ADC pin. A custom interpreter is the way to go here, but I have no good idea on how to even approach this.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>neon.Golem</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on neon.Golem</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Jul 2025 14:10:36 +0300</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, neon.Volt.</title>
+      <link>//localhost:1313/posts/hello-neon-volt/</link>
+      <pubDate>Tue, 08 Jul 2025 14:10:36 +0300</pubDate>
+      <guid>//localhost:1313/posts/hello-neon-volt/</guid>
+      <description>&lt;h1 id=&#34;neonvolt-what&#34;&gt;neon.Volt? What?&lt;/h1&gt;&#xA;&lt;p&gt;It&amp;rsquo;s a smart power supply that runs off of USB-C, utilises the rev 2 power&#xA;delivery spec and is configurable over UART, but also comes with a physical UI so it&amp;rsquo;s&#xA;usable as a standalone unit. It is my intent to share this design, so I will probably put it&#xA;out there under GPL or something. At the time of me writing this, i&amp;rsquo;m still&#xA;in the middle of finalizing the system design, but I have enough stuff on there that&#xA;the code for this project is going to keep me busy for a while - even if I vibe code&#xA;parts of it. &lt;em&gt;Especially&lt;/em&gt; if i vibe code it.  The short spec sheet is as follows: 100W, 98.5% efficient, 10mV adjustment&#xA;steps, controllable via UART. The reality of the situation though, is&#xA;that I will not be able to guarantee that efficiency and the converter will probably not be&#xA;that precise, especially with cheap leads and high currents. I can&amp;rsquo;t foresee everything that will go wrong with it.&#xA;There&amp;rsquo;s been feature creep. What started out with me adding&#xA;hardware to meet the system specification ended up being &amp;ldquo;hey, if i&amp;rsquo;m doing this anyway,&#xA;I might as well do more of the same&amp;rdquo; and that&amp;rsquo;s how I arrived at a full 16 bit&#xA;user addressable terminal block, a user accessible ADC pin, a dedicated 3V3 rail and an adjustable output of&#xA;1 to 30 volts, a color 320x240 screen and enough flash memory to comfortably run Doom on this thing.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/about/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m an electronics engineer with high functioning ADHD and probably some form of autism. This is my project porfolio, not really sure how far I&amp;rsquo;m willing to take it, but right now I feel like I want an outlet like this and I bought the .com so ehh, fuck it.&lt;/p&gt;&#xA;&lt;p&gt;The blog is made in hugo and hosted by cloudflare, the template/theme is Terminal and I&amp;rsquo;ve left much of the references to the original author in place to give credit.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>neon.Volt</title>
+      <link>//localhost:1313/showcase/neon.volt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/showcase/neon.volt/</guid>
+      <description>&lt;p&gt;You need good lab tools. Good tools are expensive. So we approach the problem the maker way and we create the tools that we need. It&amp;rsquo;s a smart power supply built around the USB-C PD spec and a buck-boost switcher.&lt;/p&gt;&#xA;&lt;p&gt;Relevant posts:&lt;/p&gt;&#xA;&lt;p&gt;   (07.08.2025) &lt;a href=&#34;//localhost:1313/posts/hello-neon-volt/&#34;&gt;Hello, neon.Volt.&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>volt.OS</title>
+      <link>//localhost:1313/showcase/volt.os/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/showcase/volt.os/</guid>
+      <description>&lt;p&gt;The firmware for the power supply is going to be fairly complex in the sense that I have a lot of features on the board. The main issue is the user addressable IO and ADC pin. A custom interpreter is the way to go here, but I have no good idea on how to even approach this.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
