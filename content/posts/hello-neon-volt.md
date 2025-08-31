@@ -1,7 +1,7 @@
 +++ 
 draft = false 
 date = 2025-07-08T14:10:36+03:00
-title = "Hello, neon.Volt."
+title = "Hello, neon•Volt."
 description = "Introduction to the smart power supply. First post ever! Very exciting stuff."
 tags = ["neon.Volt", "project overview", "system design"]
 +++

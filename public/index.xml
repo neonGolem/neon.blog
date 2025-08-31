@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>neon.Golem</title>
+    <title>neon•Golem</title>
     <link>//localhost:1313/</link>
-    <description>Recent content on neon.Golem</description>
+    <description>Recent content on neon•Golem</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 08 Jul 2025 14:10:36 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 31 Aug 2025 00:52:19 +0300</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello, neon.Volt.</title>
+      <title>Am I still an engineer?</title>
+      <link>//localhost:1313/posts/smoke-test/</link>
+      <pubDate>Sun, 31 Aug 2025 00:52:19 +0300</pubDate>
+      <guid>//localhost:1313/posts/smoke-test/</guid>
+      <description>&lt;h2 id=&#34;am-i-still-an-engineer&#34;&gt;Am I still an engineer?&lt;/h2&gt;&#xA;&lt;p&gt;The question itself is pretty wild coming from me, someone working as an engineer, but hear me out. It&amp;rsquo;s been almost a year since I wrote any firmware or did any work on any microcontroller in general. This is then an excellent smoke test - do I still have what it takes? The premise is not too outlandish. Wire up an STUSB4500, tell it to negotiate 5V3A, 9V1.5A  and 15V3A. A month ago, I placed an order with a Chinese manufacturer and received the boards last week. By default the IC does not negotiate 9V - which is incidentally the one I need, because that&amp;rsquo;s what the cheapest big capacity powerbank I chose to use does. For programming the device, I left a 100mil grid of testpoints that I intend to connect to using pogo pins. The 3x2 grid consists of 2 vias in opposing corners, a ground, a power and the I2C pins. Simple enough. An afternoon is all it should take.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello, neon•Volt.</title>
       <link>//localhost:1313/posts/hello-neon-volt/</link>
       <pubDate>Tue, 08 Jul 2025 14:10:36 +0300</pubDate>
       <guid>//localhost:1313/posts/hello-neon-volt/</guid>

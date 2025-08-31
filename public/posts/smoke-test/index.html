@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>Am I still an engineer? :: neon•Golem</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="I2C is easy, except when it isn&#39;t" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="//localhost:1313/posts/smoke-test/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/main.min.775ac2af004d44c22a6d000fbd1d9af529642f5cef27399d0280d180af2c2e9b.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/menu.min.310d32205bdedd6f43144e3c3273c9deecd238eba5f9108db5ea96ca0cfbe377.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/post.min.ad50c7f4d00e7975918f37fc74c6029e1959a40d66fb5b2c6564a8715e985573.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/syntax.min.e9ab635cf918bc84b901eb65c0b2caa74c9544245e3647c1af5c129896ef276e.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="//localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Am I still an engineer?">
+<meta property="og:description" content="I2C is easy, except when it isn&#39;t" />
+<meta property="og:url" content="//localhost:1313/posts/smoke-test/" />
+<meta property="og:site_name" content="neon•Golem" />
+
+  <meta property="og:image" content="//localhost:1313/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2025-08-31 00:52:19 &#43;0300 EEST" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    neon.Golem
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+        
+          <li><a href="/posts" >Posts</a></li>
+        
+      
+        
+          <li><a href="/showcase" >Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="//localhost:1313/posts/smoke-test/">Am I still an engineer?</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-08-31</time></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="//localhost:1313/tags/volt.os/">volt.OS</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/embedded/">embedded</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/firmware/">firmware</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/usb-pd/">USB PD</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h2 id="am-i-still-an-engineer">Am I still an engineer?<a href="#am-i-still-an-engineer" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>The question itself is pretty wild coming from me, someone working as an engineer, but hear me out. It&rsquo;s been almost a year since I wrote any firmware or did any work on any microcontroller in general. This is then an excellent smoke test - do I still have what it takes? The premise is not too outlandish. Wire up an STUSB4500, tell it to negotiate 5V3A, 9V1.5A  and 15V3A. A month ago, I placed an order with a Chinese manufacturer and received the boards last week. By default the IC does not negotiate 9V - which is incidentally the one I need, because that&rsquo;s what the cheapest big capacity powerbank I chose to use does. For programming the device, I left a 100mil grid of testpoints that I intend to connect to using pogo pins. The 3x2 grid consists of 2 vias in opposing corners, a ground, a power and the I2C pins. Simple enough. An afternoon is all it should take.</p>
+<h2 id="i2c-is-actually-dead-simple">I2C is actually dead simple.<a href="#i2c-is-actually-dead-simple" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>The title poses an interesting question. I2C is actually not as simple as you might think. If all you do is use a HAL written by someone else, it tends to work. The RP2040 drivers are actually somewhat comprehensive in that they error check for you. The Raspberry foundation holds your hand like your crush in your favorite shoujo manga. All you have to do is make sure your circuit is good. Right?
+Well, while that <em>is</em> true, the Raspberry foundation does not check your designs and they do not cross reference your datasheets. What follows is a relatively common experience among new engineers. Sometimes the bus aint seeing eye-to-square-to-c with you (I&rsquo;m sorry, I won&rsquo;t do it again). This is not an issue with the HAL, this is an issue with me. When you work with the pico as rarely as I do, you always google for the pinout and you look at the pin numbers. This is not the way.<br>
+<img src="/img/pico-pinout.png" alt="Pico pinout"><br>
+GP9 and GP10 are not valid I2C pins. Rookie mistake. I&rsquo;ve been working in the field for a while now and I still make this mistake. This is basically just reading comprehension.</p>
+<h2 id="the-toolchain">The toolchain.<a href="#the-toolchain" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>(if you don&rsquo;t use a vim based workflow, ignore all of this)<br>
+This is where the initial troubles started. I&rsquo;m not going to go through the entire day that it took me to set up the toolchain and workflow - one does not simply apt-get install arm to get a system that actually compiles code for you. I&rsquo;m also going to skip the entire process to get neovim working with clangd. I&rsquo;m just going to say that you need to generate a compile-commands.json or the LSP is never happy and it will keep yelling at you in red until you satisfy it. On top of that, even if you do your best to set everything up, you add your &lsquo;-I/usr/lib/arm-none-eabi-gcc&rsquo; whatevers to the compile commands, you will still get warnings that your headers are not used directly - which is a fair point from the LSP, but entirely redundant when you just want to compile code. For anyone actually new to neovim, the LSP, clangd in this case, does not even need to know what the build system knows - but it&rsquo;s quite helpful if it does. If it does, it can tell you where you fuck up before you compile. IDEs will probably do this automatically - I don&rsquo;t actually remember, it&rsquo;s been a really long time since I tried one. The thing to watch out for is the warnings though. The one you will almost always have is the one about umbrella headers. These are an embedded mainstay after all, especially stdint and the like. Umbrella headers are just header files that link to other headers without containing anything else themselves.
+Jesus, this is turning out to be like the average recipe blog post. Pages of random human experience that nobody cares to read, just to get to the <em>real</em> part. To put this into specific terms, setting up the toolchain depends on your OS. If you&rsquo;re on linux, the equivalent of apt-get install arm-none-eabi-gcc will get you 99% of the way there, the rest is just tweaking. On macOS it&rsquo;s very similar, but if you actually want to do this using neovim and the whole terminal vibe, its going to take some extra effort. First off, clangd needs specific pointers towards your copy of arm-none-eabi-gcc. It needs to know all the includes in a very verbose way. Recursion doesn&rsquo;t work here - so add those to your compile-commands.json manually. You do this once per project unless you script it (I&rsquo;m gonna make one soon enough). Depending on how you generate that, whether you use unix make or ninja, the resulting compile-commands file will be different, but those are always formatted like a json would be, so if you want to add additional include directories, just go to the last (or first) arg in that list and add &lsquo;-I/location/of/toolchain&rsquo;. Dash, uppercase I, location. Very simple. When the whole thing is set up, you want to build using an additional argument to cmake:
+&ldquo;cmake . -B build -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON&rdquo;
+If you cannot read the help file - that command runs cmake in the current directory (.), specifies the build directory with -B as &ldquo;build&rdquo; and specifies the build generator -G as &ldquo;Ninja&rdquo;, then as an extra, it generates the whole compiler and linker script extras into a compile-commands.json so the third party tool (clangd) can have a tag or link to anchor to.
+I wanted to add this here not just to help anyone that&rsquo;s never done this before, but also for myself in case I need to do this again 6 months down the line. Anything like this that you do once tends to be forgotten the next day.<br>
+(/end ignore).</p>
+<h2 id="when-the-i2c-aint-i-squared-seeing">When the I2C aint I-squared-seeing.<a href="#when-the-i2c-aint-i-squared-seeing" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Finally, the meat of the issue. What&rsquo;s the big deal, right? I2C is dead simple, right? My big problem with this thing was the issue that I wrote my own i2c driver. Given that this is for a commercial venture, it made sense to do it - even if &ldquo;getting caught&rdquo; on a GPL piece of code is essentially non-existant here. The problem with rolling your own means that you add an extra layer of uncertainty. So when I broadcast to the bus the following: &ldquo;I AM THE MASTER AND I DEMAND TO KNOW WHO RESIDES AT 0x28&rdquo;, the response was&hellip; the MCU freezing. Well great, I knew I was gonna have issues, but I did not know I would start before I&rsquo;d ever even started. This is the equivalent of going on vacation and missing your alarm clock. I was at work when I ran into this. I&rsquo;m generally a printf debugger so my idea of solving this was sort of dead in the water. If you know that your circuit is good (it wasn&rsquo;t) and that your device is alive, a printf is not going to tell you where you fucked up when the fuckup is between boot and broadcast. You need a way to interrupt to code execution to do this. This is where you would normally use a debug probe. My problem though? My debug probe was the thing running the code. I&rsquo;ve always had this issue - I flash a pico with the probe firmware, but eventually I need it to blink an LED and I lose the probe. The idea to build a neon.Tap is already there in my head, but this will not help me now. Either way, I was still at work at this point, so the only real tool I had to solve this was printf and hardware cues.
+The first thing I figured out was that I fell for the oldest thing in the raspberry book. Pin numbers DO NOT MEAN GPIO NUMBERS. Pin 9 is gnd, pin 10 is whatever. I happily declared GPIO_SET_FUNCTION(9, I2C), or something like that.
+&hellip;
+It was actually 6 and 7, not 9 and 10. This resolved the bus hanging on me.
+The next issue was to get the bus to respond with real data. The moment I got it to not freeze, I asked the chip some hard hitting questions. Who are you (print contents of 0x2f). Why are you here (please help Im on a deadline). The chip replied with the iconic 0x00. For all registers.<br>
+I then tried simply to ask for acnowledgement from the bus. I broadcast on every address reasonable in this context. Told the firmware to print an ERROR for every address scanned that didn&rsquo;t return anything. It printed an error for every address)<br>
+<img src="/img/bad-terminal.png" alt="The cursed terminal view"><br>
+This is when I decided to do the smart thing and head home. I have my scope there and I&rsquo;m not gonna beg SMT to lend me one. And it was the scope that told the truth. The ACK was a lie. It was never there. I2C is an 8 bit bus, if the bus is still low by bit 9, the acknowledgement or ACK bit, the transmission continues. If the bus is high on bit nine, you&rsquo;re all by your lonesome.
+<img src="/img/bad_ack.jpg" alt="The bad scope trace"><br>
+So what do you try? When you get to this point and read a byte on the bus followed by no ack despite your byte reading the correct address with the correct RW bit, it&rsquo;s clearly not an issue with the master. Well, I was mad at raspberry and my reading ability in combination with their documentation. Mad enough that I decided to go and get smashed instead. There was a huge crowd at my favorite bar and there was a rave party at an old prison, so I did that.
+The next day I took a crack at the board with a raging hangover. I&rsquo;m known to produce occasionally brilliant work when I&rsquo;m in this state and thinking back on it now, I should have stuck to writing or something, because I spent the day doing my nails, cooking and cleaning because the board was not giving up the beans. Then I thought I&rsquo;d wind down with some manga. Believe it or not, even THAT was taunting me<br>
+<img src="/img/cursed-manga.jpg" alt="cursed-manga"><br>
+Fucking FINE, I&rsquo;ll take a look. I cleared the chaos that is my &ldquo;workbench&rdquo;<br>
+<img src="/img/bad-bench.png" alt="cursed-bench"><br>
+I made some room. First off was to check the circuit itself, because I had my pico blasting I2C as it should have been.<br>
+This came with a minor issue. The circuit is dead simple. It&rsquo;s a copy of the app note with marginal modifications. The modifications though. How bad did I fuck up? Well. I&rsquo;ll let you judge. For some reason, I read somewhere in the datasheet, that the VSYS pin is meant to be used as a power backup for the system. This is what I intended to use to program I2C. Don&rsquo;t plug in USB, just the pico via the pogo pins, blast 3V3 at VSYS like I&rsquo;m a DJ at the rave party, go bbhleerrrghgh at the I2C and hope it understands. Well. I&rsquo;m glad I didn&rsquo;t connect to VSYS when I put 20V on VBUS (one of the defaults it negotiates), because VSYS follows VDD. So i promptly desoldered that connection, bridged it to ground like the datasheet recommended to do, removed the I2C resistors, also removed the 100n cap from the pin  and tried again. I vomitted a bitstream at the chip and&hellip; it did not terminate at bit 9. It gave me the ACK. Bit 9 was low and the transmission continued with the read command for register device_id.<br>
+<img src="/img/good_ack.jpg" alt="The good scope trace"><br>
+What. Seriously? Disbelief.<br>
+I dropped the probe like I drop the bass and started dancing in my living room. It immediately reminded I had a massive headache and i dropped my whole setup - my ground clip is fucking sticky and it pulled the whole jank assembly to the floor. Alright though, it&rsquo;s all good. This is what I was waiting for. This is what took a whole DAY to get to. It&rsquo;s speaking I2C, finally. I carefully reassemble everything and probe again. No ACK. No biggie, I know I saw it just now, I&rsquo;ll just double check the connections and try again. No ACK. It&rsquo;s &hellip;dead? I plug it in, measure the board voltages. The STUSB4500 has 3 reference points, the internal 1V2 and 2V7 and the VBUS. Not present. None of them. No output.<br>
+Why?<br>
+Something must have burned, right? Something must have shorted when it fell and now the thing is dead. No worries. I have 10 boards. I do the necessary mods to the next one, wire it up. Measure voltages - all good. Measure the bus - dead. Measure voltages - nothing. What gives. Okay, so what else can I do. What&rsquo;s the best load test to a power module? Hook it up to something nasty. In my case, the something nasty was 2x 5 ohm resistors in parallel. The chonky 10W ones, and 4 5V fans in parallel in addition to that. Total load, around 2 amps. If the STUSB is alive and doing anything at all, the default PDO is 5V3A - it&rsquo;ll get me this power and it will get me this power with haste. I solder it up, my headache getting worse by the minute. I power it up. No voltage drop on the output. Rock solid. My thermal probe (pinky finger) says 5 seconds is the max it can touch it, meaning it&rsquo;s between 50 and 60 degrees C. The fans though. They&rsquo;re going, I leave them going for a while and then I notice that they&rsquo;re not going. I replug the power bank. Starts up. I place the powerbank on the ground and the fans cut out.</p>
+<h2 id="the-fucking-type-c-cable-designed-in-california">The fucking type-c cable, &ldquo;designed in California&rdquo;.<a href="#the-fucking-type-c-cable-designed-in-california" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>I was a little bothered by this cable not having that satisfying notch or click when it plugs in. It&rsquo;s an apple cable though, so surely it&rsquo;s fine? <!-- raw HTML omitted --><br>
+It&rsquo;s not. It really wasn&rsquo;t fine.<br>
+The difference between good and bad contact with the powerbank is visually indistinguishable.<br>
+<img src="/img/cable_connected.jpg" alt="The rotten cable">
+<img src="/img/cable_not_connected.jpg" alt="The rotten cable">
+Can you tell? I cannot.<br>
+I took a step back.<br>
+&ldquo;There&rsquo;s no way&rdquo;<br>
+&ldquo;Why? How is this even possible?&rdquo;<br>
+&ldquo;Defeated by a cable?&rdquo;<br>
+It&rsquo;s a fucking rite of passage. Every. Single. Time. It&rsquo;s. Something. Really. Fucking. Stupid.<br>
+So anyway, I cracked open a cold one and I&rsquo;m about to head out to my favorite bar, to wish one of my favorite bartenders good luck on his endeavors. It&rsquo;s his last shift, he&rsquo;s going to school next week. To become an electronics engineer. <br>
+Godspeed my friend.</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+    
+      <a href="//localhost:1313/posts/hello-neon-volt/" class="button inline next">
+         [<span class="button__text">Hello, neon•Volt.</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

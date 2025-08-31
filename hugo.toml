@@ -75,7 +75,7 @@ pagination.pagerSize = 5
 [languages]
   [languages.en]
     languageName = "English"
-    title = "neon.Golem"
+    title = "neon•Golem"
 
     [languages.en.params]
       subtitle = "Open source hardware and ramblings."
