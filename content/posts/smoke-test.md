@@ -10,14 +10,6 @@ tags = ["volt.OS", "embedded", "firmware", "USB PD"]
 
 The question itself is pretty wild coming from me, someone working as an engineer, but hear me out. It's been almost a year since I wrote any firmware or did any work on any microcontroller in general. This is then an excellent smoke test - do I still have what it takes? The premise is not too outlandish. Wire up an STUSB4500, tell it to negotiate 5V3A, 9V1.5A  and 15V3A. A month ago, I placed an order with a Chinese manufacturer and received the boards last week. By default the IC does not negotiate 9V - which is incidentally the one I need, because that's what the cheapest big capacity powerbank I chose to use does. For programming the device, I left a 100mil grid of testpoints that I intend to connect to using pogo pins. The 3x2 grid consists of 2 vias in opposing corners, a ground, a power and the I2C pins. Simple enough. An afternoon is all it should take.   
 
-
-## I2C is actually dead simple.
-
-The title poses an interesting question. I2C is actually not as simple as you might think. If all you do is use a HAL written by someone else, it tends to work. The RP2040 drivers are actually somewhat comprehensive in that they error check for you. The Raspberry foundation holds your hand like your crush in your favorite shoujo manga. All you have to do is make sure your circuit is good. Right? 
-Well, while that _is_ true, the Raspberry foundation does not check your designs and they do not cross reference your datasheets. What follows is a relatively common experience among new engineers. Sometimes the bus aint seeing eye-to-square-to-c with you (I'm sorry, I won't do it again). This is not an issue with the HAL, this is an issue with me. When you work with the pico as rarely as I do, you always google for the pinout and you look at the pin numbers. This is not the way.  
-![Pico pinout](/img/pico-pinout.png)  
-GP9 and GP10 are not valid I2C pins. Rookie mistake. I've been working in the field for a while now and I still make this mistake. This is basically just reading comprehension. 
-
 ## The toolchain.
 
 (if you don't use a vim based workflow, ignore all of this)  
@@ -33,8 +25,8 @@ I wanted to add this here not just to help anyone that's never done this before,
 
 Finally, the meat of the issue. What's the big deal, right? I2C is dead simple, right? My big problem with this thing was the issue that I wrote my own i2c driver. Given that this is for a commercial venture, it made sense to do it - even if "getting caught" on a GPL piece of code is essentially non-existant here. The problem with rolling your own means that you add an extra layer of uncertainty. So when I broadcast to the bus the following: "I AM THE MASTER AND I DEMAND TO KNOW WHO RESIDES AT 0x28", the response was... the MCU freezing. Well great, I knew I was gonna have issues, but I did not know I would start before I'd ever even started. This is the equivalent of going on vacation and missing your alarm clock. I was at work when I ran into this. I'm generally a printf debugger so my idea of solving this was sort of dead in the water. If you know that your circuit is good (it wasn't) and that your device is alive, a printf is not going to tell you where you fucked up when the fuckup is between boot and broadcast. You need a way to interrupt to code execution to do this. This is where you would normally use a debug probe. My problem though? My debug probe was the thing running the code. I've always had this issue - I flash a pico with the probe firmware, but eventually I need it to blink an LED and I lose the probe. The idea to build a neon.Tap is already there in my head, but this will not help me now. Either way, I was still at work at this point, so the only real tool I had to solve this was printf and hardware cues.
 The first thing I figured out was that I fell for the oldest thing in the raspberry book. Pin numbers DO NOT MEAN GPIO NUMBERS. Pin 9 is gnd, pin 10 is whatever. I happily declared GPIO_SET_FUNCTION(9, I2C), or something like that. 
-...
-It was actually 6 and 7, not 9 and 10. This resolved the bus hanging on me. 
+![PICO pinout](/img/pico-pinout)  
+I wanted 6 and 7, not 9 and 10. This resolved the bus hanging on me. 
 The next issue was to get the bus to respond with real data. The moment I got it to not freeze, I asked the chip some hard hitting questions. Who are you (print contents of 0x2f). Why are you here (please help Im on a deadline). The chip replied with the iconic 0x00. For all registers.  
 I then tried simply to ask for acnowledgement from the bus. I broadcast on every address reasonable in this context. Told the firmware to print an ERROR for every address scanned that didn't return anything. It printed an error for every address)  
 ![The cursed terminal view](/img/bad-terminal.png)   
@@ -44,7 +36,6 @@ So what do you try? When you get to this point and read a byte on the bus follow
 The next day I took a crack at the board with a raging hangover. I'm known to produce occasionally brilliant work when I'm in this state and thinking back on it now, I should have stuck to writing or something, because I spent the day doing my nails, cooking and cleaning because the board was not giving up the beans. Then I thought I'd wind down with some manga. Believe it or not, even THAT was taunting me  
 ![cursed-manga](/img/cursed-manga.jpg)  
 Fucking FINE, I'll take a look. I cleared the chaos that is my "workbench"  
-![cursed-bench](/img/bad-bench.png)  
 I made some room. First off was to check the circuit itself, because I had my pico blasting I2C as it should have been.  
 This came with a minor issue. The circuit is dead simple. It's a copy of the app note with marginal modifications. The modifications though. How bad did I fuck up? Well. I'll let you judge. For some reason, I read somewhere in the datasheet, that the VSYS pin is meant to be used as a power backup for the system. This is what I intended to use to program I2C. Don't plug in USB, just the pico via the pogo pins, blast 3V3 at VSYS like I'm a DJ at the rave party, go bbhleerrrghgh at the I2C and hope it understands. Well. I'm glad I didn't connect to VSYS when I put 20V on VBUS (one of the defaults it negotiates), because VSYS follows VDD. So i promptly desoldered that connection, bridged it to ground like the datasheet recommended to do, removed the I2C resistors, also removed the 100n cap from the pin  and tried again. I vomitted a bitstream at the chip and... it did not terminate at bit 9. It gave me the ACK. Bit 9 was low and the transmission continued with the read command for register device_id.  
 ![The good scope trace](/img/good_ack.jpg)  
