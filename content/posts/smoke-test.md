@@ -41,23 +41,26 @@ The modifications. How bad did I fuck up? I read somewhere in the datasheet (obv
 ![The good scope trace](/img/good_ack.jpg)  
 What. Seriously? FML.  
 I dropped the probe like I drop the bass and started dancing in my living room. It immediately reminded I had a massive headache and I dropped my whole setup - my ground clip is fucking sticky and it yanked the whole jank assembly to the floor. Alright though, it's all good. This is what I was waiting for. This is what took a whole DAY to get to. It's speaking I2C, finally. I carefully reassemble everything and probe it again to verify. No ACK. No biggie, I know I saw it just now, I'll just double check the connections and try again. No ACK. It's ...dead? I plug it in, measure the board voltages. The STUSB4500 has 3 reference points, the internal 1V2 and 2V7 and the VBUS. Not present. None of them. No output.  
-Why?  
-Something must have burned, right? Something must have shorted when it fell and now the thing is dead. No worries. I have 10 boards. I do the necessary mods to the next one, wire it up. Measure voltages - all good. Measure the bus - dead. Measure voltages - nothing. What gives. Okay, so what else can I do. What's the best load test to a power module? Hook it up to something nasty. In my case, the something nasty was 2x 5 ohm resistors in parallel. The chonky 10W ones, and 4 5V fans in parallel in addition to that. Total load, around 2 amps. If the STUSB is alive and doing anything at all, the default 5V PDO is 3A - it'll get me this power and it will get me this power with haste. I solder it up, my headache getting worse by the minute. I power it up. No voltage drop on the output. Rock solid. My thermal probe (pinky finger) says 5 seconds is the max it can touch it, meaning it's between 50 and 60 degrees C. The fans though. They're going, I leave them going for a while and then I notice that they're not going. I replug the power bank. Starts up. I place the powerbank on the ground and the fans cut out.  
+Why? Something must have burned, right? Something must have shorted when it fell and now the thing is dead. No worries. I have 10 boards. I do the necessary mods to the next one, wire it up. Measure voltages - all good. Measure the bus - dead. Measure voltages - nothing. What gives. Okay, so what else can I do. What's the best load test to a power module? Hook it up to something nasty. In my case, the something nasty was 2x 5 ohm resistors in parallel. The chonky 10W ones, and 4 5V fans in parallel in addition to that. Total load, around 2 amps. If the STUSB is alive and doing anything at all, the default 5V PDO is 3A - it'll get me this power and it will get me this power with haste. I solder it up, my headache getting worse by the minute. I power it up. No voltage drop on the output. Rock solid. My thermal probe (pinky finger) says 5 seconds is the max it can touch it, meaning it's between 50 and 60 degrees C. The fans though. They're going, I leave them going for a while and then I notice that they're not going. I replug the power bank. Starts up. I place the powerbank on the ground and the fans cut out.  
 ![Cables](/img/cable.png)  
 
 
 ## The fucking type-c cable, "designed in California". 
 
-I was a little bothered by this cable not having that satisfying notch or click when it plugs in. It's an apple cable though, so surely it's fine? <insert cable.png>  
+It's now Sunday, I spent around 8 hours on this on Friday, around 3 on Saturday and today? It's gonna start working today, no matter how long it takes.  
+I was a little bothered by this cable from the start. It's the one I got with my iPad. It's from 2018. It no longer has that that satisfying notch or click when it plugs in. It's an Apple cable though, so surely it's fine? Surely, Apple makes things that last. 
 It's not. It really wasn't fine.  
 The difference between good and bad contact with the powerbank is visually indistinguishable.  
-![The rotten cable](/img/cable_connected.jpg)
-![The rotten cable](/img/cable_not_connected.jpg)
+![The rotten cable](/img/cable_connected.jpg)  
+This is the cable properly plugged in.  
+  
+![The rotten cable](/img/cable_not_connected.jpg)  
+This is the cable disconnected.  
 Can you tell? I cannot.  
 I took a step back.  
 "There's no way"  
-"Why? How is this even possible?"  
-"Defeated by a cable?"  
+"How is this even possible?"  
+"Defeated by a cable"  
 It's a fucking rite of passage. Every. Single. Time. It's. Something. Really. Fucking. Stupid.  
 So anyway, since the chip is finally speaking my language, the rest is basically sorted (famous last words, by the way). I'll leave the rest for tomorrow, the bitmaps for the registers are weird as the datasheet doesn't exactly specify endianness, but it's just a matter of time now. 
 I cracked open a cold one and I'm about to head out to my favorite bar, to wish one of the more fun bartenders around here good luck on his endeavors. It's his last shift, he's going to school next week. To become an electronics engineer.    
