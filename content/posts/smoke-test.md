@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2025-08-31T00:52:19+03:00
-title = "Am I still an engineer?"
+title = "The smoke test. Am I still an engineer?"
 description = "I2C is easy, except when it isn't"
 tags = ["volt.OS", "embedded", "firmware", "USB PD"]
 +++
@@ -65,4 +65,6 @@ It's a fucking rite of passage. Every. Single. Time. It's. Something. Really. Fu
 So anyway, since the chip is finally speaking my language, the rest is basically sorted (famous last words, by the way). I'll leave the rest for tomorrow, the bitmaps for the registers are weird as the datasheet doesn't exactly specify endianness, but it's just a matter of time now. 
 I cracked open a cold one and I'm about to head out to my favorite bar, to wish one of the more fun bartenders around here good luck on his endeavors. It's his last shift, he's going to school next week. To become an electronics engineer.    
 
+## volt.OS?
 
+This IC is gonna be running the USB show on the neon.Volt, so it's getting this tag. Sure, this small power module is work-related, but this code is also going into my project. Well, parts of it at least. I'm not entirely certain I'm going to use most of its' features though, but it's good practice regardless. And despite all the moaning, I'm doing this because it's genuinely fun. Frustrating, but fun. 
