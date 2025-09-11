@@ -6,8 +6,15 @@
     <description>Recent content on neon•Golem</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 31 Aug 2025 00:52:19 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 11 Sep 2025 23:07:32 +0300</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I2c Electric Boogaloo</title>
+      <link>//localhost:1313/posts/i2c-electric-boogaloo/</link>
+      <pubDate>Thu, 11 Sep 2025 23:07:32 +0300</pubDate>
+      <guid>//localhost:1313/posts/i2c-electric-boogaloo/</guid>
+      <description>&lt;h2 id=&#34;communication-established-now-what&#34;&gt;Communication established. Now what?&lt;/h2&gt;&#xA;&lt;p&gt;The last chapter details the pains of getting the silicon to respond to us. What needs to happen next is a two way communication with meaning. Since we&amp;rsquo;re working with a microcontroller, the first step is to establish a communication method that enables the MCU to talk to the target in such a way that we don&amp;rsquo;t have to hard-code every single thing. Up til now, I&amp;rsquo;ve set it to just fire a command at the I2C bus on the push of a button and then report its&amp;rsquo; findings over UART. The better way of doing this is to have the machine read the incoming data from UART and react accordingly.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The smoke test. Am I still an engineer?</title>
       <link>//localhost:1313/posts/smoke-test/</link>
