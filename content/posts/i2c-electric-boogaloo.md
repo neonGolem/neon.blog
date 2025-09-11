@@ -29,7 +29,7 @@ int main() {
             if (c == '\n' || c == '\r' || idx >= MAX_LEN - 1) {
                 char *send_cmd= strtok(buf, " ");
                 char *arg = strtok(NULL, " ");
-                printf("read cmd: %s read arg %s\n", send_cmd, arg);
+                printf("read cmd: %s read arg %s\n", send_cmd arg);
                 buf[idx] = '\0';   
                 idx = 0;          
             } else {
