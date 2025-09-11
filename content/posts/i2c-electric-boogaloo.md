@@ -1,5 +1,5 @@
 +++
-title = "I2c Electric Boogaloo"
+title = "I2C 2 - Electric Boogaloo"
 date = "2025-09-11T23:07:32+03:00"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting
 author = "neon.M@ks"
