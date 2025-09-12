@@ -197,30 +197,28 @@
 <h2 id="the-interpreter">The interpreter<a href="#the-interpreter" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>What even is an interpreter? In this context, we&rsquo;re talking about a method for the machine to understand what we&rsquo;re saying. A piece of software to translate our words to the MCU. In simple terms, I want to write to the UART the MCU is listening on, something like i2c_write 28 89 00. The MCU needs to understand that it&rsquo;s looking at a space delimited string that has different components to it. It needs to translate it into the command (i2c_write), device address (28), target register (89) and data (00). The arm-none-eabi gives us the tools for this inside string.h. We want strtok (breaking the string into tokens) and strtol (string to long int). The listening to UART part is, in the case of the RP2040, actually very easy. If you&rsquo;re familiar with the CDC-ACM implementation on it, it essentially takes the emulation of the UART protocol over USB and treats it as stdio. Reading from and writing to it therefore becomes as easy as interacting with the bash shell on a UNIX system. If printf writes to stdout, anything incoming is going to be there in stdin. The mechanics of this are actually quite complicated and I&rsquo;m not going into that now (partly because I dont&rsquo; entirely understand it myself), but for us right now, this means we can simply parse a buffer char by char, then do some math on it and use the results in a follow-up.
 The code snippet I used to verify this is as follows:</p>
-<pre>
-int main() {
-    stdio_init_all();
-    char buf[MAX_LEN];
-    int idx = 0;
-
-    while (true) {
-        sleep_ms(100);
-        int c = getchar_timeout_us(0);
-        if (c != PICO_ERROR_TIMEOUT) {
-            if (c == '\n' || c == '\r' || idx >= MAX_LEN - 1) {
-                char *send_cmd= strtok(buf, " ");
-                char *arg = strtok(NULL, " ");
-                printf("read cmd: %s read arg %s\n", send_cmd arg);
-                buf[idx] = '\0';   
-                idx = 0;          
-            } else {
-                buf[idx++] = (char)c;
-            }
-        }
-    }
-}
-</pre>
-<p>The condition for the if statement looks for either \n or \r, which is different between Linux and UNIX. Since my laptop uses \r by default when pressing enter, I need to add that there or the machine would never realise I sent it a string with an endline terminator.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">stdio_init_all</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="n">MAX_LEN</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">sleep_ms</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="nf">getchar_timeout_us</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">!=</span> <span class="n">PICO_ERROR_TIMEOUT</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;\n&#39;</span> <span class="o">||</span> <span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;\r&#39;</span> <span class="o">||</span> <span class="n">idx</span> <span class="o">&gt;=</span> <span class="n">MAX_LEN</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">char</span> <span class="o">*</span><span class="n">send_cmd</span><span class="o">=</span> <span class="nf">strtok</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">char</span> <span class="o">*</span><span class="n">arg</span> <span class="o">=</span> <span class="nf">strtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;read cmd: %s read arg %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">send_cmd</span> <span class="n">arg</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">buf</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span>   
+</span></span><span class="line"><span class="cl">                <span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>          
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">buf</span><span class="p">[</span><span class="n">idx</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The condition for the if statement looks for either \n or \r, which is different between Linux and UNIX. Since my laptop uses \r by default when pressing enter, I need to add that there or the machine would never realise I sent it a string with an endline terminator.</p>
 <p>Let&rsquo;s see if it works then, shall we?</p>
 <p><img src="/img/send-uart-pls.png" alt="send UART"></p>
 <p>Looks like it&rsquo;s doing what we want it to be doing. This is excellent.<br>

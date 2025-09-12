@@ -48,7 +48,7 @@
       <link>//localhost:1313/showcase/volt.os/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/showcase/volt.os/</guid>
-      <description>&lt;p&gt;The firmware for the power supply is going to be fairly complex in the sense that I have a lot of features on the board. The main issue is the user addressable IO and ADC pin. A custom interpreter is the way to go here, but I have no good idea on how to even approach this.&lt;/p&gt;&#xA;&lt;p&gt;   (07.08.2025) &lt;a href=&#34;//localhost:1313/posts/smoke-test/&#34;&gt;The smoke test. Am I still an engineer?&lt;/a&gt;&#xA;   (07.08.2025) &lt;a href=&#34;//localhost:1313/posts/i2c-electric-boogaloo/&#34;&gt;I2C 2 - Electric Boogaloo.&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;The firmware for the power supply is going to be fairly complex in the sense that I have a lot of features on the board. The main issue is the user addressable IO and ADC pin. A custom interpreter is the way to go here, but I have no good idea on how to even approach this.&lt;/p&gt;&#xA;&lt;p&gt;   (07.08.2025) &lt;a href=&#34;//localhost:1313/posts/smoke-test/&#34;&gt;The smoke test. Am I still an engineer?&lt;/a&gt;&lt;br&gt;&#xA;   (07.08.2025) &lt;a href=&#34;//localhost:1313/posts/i2c-electric-boogaloo/&#34;&gt;I2C 2 - Electric Boogaloo.&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

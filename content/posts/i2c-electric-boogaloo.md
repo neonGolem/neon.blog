@@ -16,7 +16,7 @@ The last chapter details the pains of getting the silicon to respond to us. What
 
 What even is an interpreter? In this context, we're talking about a method for the machine to understand what we're saying. A piece of software to translate our words to the MCU. In simple terms, I want to write to the UART the MCU is listening on, something like i2c_write 28 89 00. The MCU needs to understand that it's looking at a space delimited string that has different components to it. It needs to translate it into the command (i2c_write), device address (28), target register (89) and data (00). The arm-none-eabi gives us the tools for this inside string.h. We want strtok (breaking the string into tokens) and strtol (string to long int). The listening to UART part is, in the case of the RP2040, actually very easy. If you're familiar with the CDC-ACM implementation on it, it essentially takes the emulation of the UART protocol over USB and treats it as stdio. Reading from and writing to it therefore becomes as easy as interacting with the bash shell on a UNIX system. If printf writes to stdout, anything incoming is going to be there in stdin. The mechanics of this are actually quite complicated and I'm not going into that now (partly because I dont' entirely understand it myself), but for us right now, this means we can simply parse a buffer char by char, then do some math on it and use the results in a follow-up. 
 The code snippet I used to verify this is as follows:
-<pre>
+```C
 int main() {
     stdio_init_all();
     char buf[MAX_LEN];
@@ -38,7 +38,7 @@ int main() {
         }
     }
 }
-</pre>
+```
 
 The condition for the if statement looks for either \n or \r, which is different between Linux and UNIX. Since my laptop uses \r by default when pressing enter, I need to add that there or the machine would never realise I sent it a string with an endline terminator. 
 
