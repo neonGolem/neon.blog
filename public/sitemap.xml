@@ -46,11 +46,19 @@
   </url><url>
     <loc>//localhost:1313/about/</loc>
   </url><url>
+    <loc>//localhost:1313/tags/ancient-mystery/</loc>
+  </url><url>
     <loc>//localhost:1313/tags/arm/</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/atmospheric/</loc>
   </url><url>
     <loc>//localhost:1313/tags/c/c&#43;&#43;/</loc>
   </url><url>
     <loc>//localhost:1313/categories/</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/forgotten/</loc>
+  </url><url>
+    <loc>//localhost:1313/writing/forgotten_gods/</loc>
   </url><url>
     <loc>//localhost:1313/tags/interpreter/</loc>
   </url><url>
@@ -66,7 +74,11 @@
   </url><url>
     <loc>//localhost:1313/tags/rp2040/</loc>
   </url><url>
+    <loc>//localhost:1313/tags/sci-fi/</loc>
+  </url><url>
     <loc>//localhost:1313/showcase/</loc>
+  </url><url>
+    <loc>//localhost:1313/writing/</loc>
   </url><url>
     <loc>//localhost:1313/tags/tools/</loc>
   </url><url>

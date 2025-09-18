@@ -65,6 +65,13 @@
       <description></description>
     </item>
     <item>
+      <title>Ancient Mystery</title>
+      <link>//localhost:1313/tags/ancient-mystery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/ancient-mystery/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>ARM</title>
       <link>//localhost:1313/tags/arm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -72,10 +79,24 @@
       <description></description>
     </item>
     <item>
+      <title>Atmospheric</title>
+      <link>//localhost:1313/tags/atmospheric/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/atmospheric/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>C/C&#43;&#43;</title>
       <link>//localhost:1313/tags/c/c&#43;&#43;/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/tags/c/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Forgotten</title>
+      <link>//localhost:1313/tags/forgotten/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/forgotten/</guid>
       <description></description>
     </item>
     <item>
@@ -118,6 +139,13 @@
       <link>//localhost:1313/tags/rp2040/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/tags/rp2040/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sci-Fi</title>
+      <link>//localhost:1313/tags/sci-fi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/sci-fi/</guid>
       <description></description>
     </item>
     <item>
