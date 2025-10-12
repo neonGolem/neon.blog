@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>Feature creep, the project. neon.Volt system design. :: neon•Golem</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="neon.Volt system design" />
+<meta name="keywords" content="power, lab, tools" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="//localhost:1313/posts/neon-volt-system/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/main.min.775ac2af004d44c22a6d000fbd1d9af529642f5cef27399d0280d180af2c2e9b.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/menu.min.310d32205bdedd6f43144e3c3273c9deecd238eba5f9108db5ea96ca0cfbe377.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/post.min.ad50c7f4d00e7975918f37fc74c6029e1959a40d66fb5b2c6564a8715e985573.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/syntax.min.e9ab635cf918bc84b901eb65c0b2caa74c9544245e3647c1af5c129896ef276e.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="//localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="//localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Feature creep, the project. neon.Volt system design.">
+<meta property="og:description" content="neon.Volt system design" />
+<meta property="og:url" content="//localhost:1313/posts/neon-volt-system/" />
+<meta property="og:site_name" content="neon•Golem" />
+
+  <meta property="og:image" content="//localhost:1313/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2025-10-05 22:36:39 &#43;0300 EEST" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    neon.Golem
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+        
+          <li><a href="/posts" >Posts</a></li>
+        
+      
+        
+          <li><a href="/showcase" >Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="//localhost:1313/posts/neon-volt-system/">Feature creep, the project. neon.Volt system design.</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-10-05</time></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="//localhost:1313/tags/system-design/">system design</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/neon.volt/">neon.volt</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="neonvolt---so-what-is-it">neon.Volt - so what is it?<a href="#neonvolt---so-what-is-it" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<p>What is your favorite electronic gadget? I&rsquo;m willing to put money on it being something like your phone or your iPad. If you think yourself clever, you might say an Arduino or something. As for me? It&rsquo;s the power brick for my Steam Deck (followed closely by the Deck itself, I mean it&rsquo;s basically a cyberdeck, but in contrast to the hobbyist ones you see, it&rsquo;s actually good).</p>
+<h3 id="why">Why?<a href="#why" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>I realized this after it became my go to charger for everything. It charges my phone, my tablet, my laptop. It runs my f*cking pinecil. As long as I had this in my bag, I felt safe.<br>
+As far as specs go, it&rsquo;s perfectly average, which is ideal because that keeps it nice and compact. 45W, 20V 1.5A. It&rsquo;s plenty for almost anything. Much like I mentioned in the intro for this project, I needed a portable, programmable source of power. So uh, let&rsquo;s hack the power brick and make the 45 watts on that thing adjustable.</p>
+<h1 id="a-switcher-not-a-negotiated-passthrough">A switcher, not a negotiated passthrough?<a href="#a-switcher-not-a-negotiated-passthrough" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<p>The folks at Pocket PD have a point. The power brick already has a buck converter inside. Why add another? All we need to do is to talk to the MCU running the show in there and that will get us all of the USB compliant voltages (5-20). In general, this is good enough for about 80% of the use cases for a device classified as an emergency replacement for a bench PSU. For my specific use case though? Well, I wanted to test motor control on it. That was the project I had in mind when I started this (and before everything spiralled). My specific BLDCs? System designed to run at 24V. Type C spec? Up to 20V. This is not the only reason though. The bulk of the remaining 20% that a programmable type C source will not cover is 3V3, which is essentially the be-all end-all of hobbyist logic rails. ESP32 - 3V3. Pico - 3V3. STM32F* - 3V3. Most of the general purpose MCUs are 5V tolerant, but they&rsquo;re designed to run at 3V3 and making the PSU limited to just 5V is setting yourself up for issues down the line with stuff like ADC references and whatnot. The additional uses for the extended range include 1V8 and 1V1 logic, and on the top end, in addition to motor control, 24V, which is the main voltage for industrial automation and while I don&rsquo;t really see anyone developing those systems on the neon.Volt, you can still technically do it. I know I will. On top of that, this opens up the potential use of the top range for testing the 24V systems&rsquo; overvoltage protections. For example.</p>
+<h1 id="so-why-a-4-switcher">So why a 4-switcher?<a href="#so-why-a-4-switcher" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<p>The short answer is, because I <del>like pain</del> stumbled upon the IC by chance and I thought it&rsquo;s really cool. I&rsquo;ve never played with those before and I was aching for an excuse to do just that. <del>And god knows I need to get better with I2C</del> I was especially enamoured by the I2C control set on it.</p>
+<p>So what is a 4-switcher? In short, it&rsquo;s a DC-DC device that does both buck and boost (meaning it both reduces and increases voltage in relation to the input). It has all the parts for both of them and to complement that, it integrates an H-bridge gate driver. The specific part that I picked, LM51772, has 2 amps of drive strength so it can potentially drive some pretty beefy FETs. Before anyone says anything, I&rsquo;m aware that there&rsquo;s a version of this available that does the USB PD negotiation in addition to the boosting and the bucking, but I&rsquo;ve been wanting to design around the STUSB4500 too, so this is a good opportunity. It enables some additional control that makes this build potentially more versatile, and the dedicated discharge paths on it fill me with confidence for both the safety and longevity of the end product.</p>
+<h1 id="system-design">System design<a href="#system-design" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<p>On the top level, this project divides into 3 logical blocks: The input-output, power and control.</p>
+<p><img src="/img/top-level-schematic.png" alt="System overview"></p>
+<p>It&rsquo;s quite hefty and this really pushes the bus handling capabilities of <del>my sanity</del> KiCAD. I&rsquo;ve not really taken a deeper look into the software package as for the longest time, I&rsquo;ve been obsessed with just finishing the schematics, but I&rsquo;m aware that there should be a better way to work with buses across hierarchical sheets. Well, whatever. Let me break it down for you.</p>
+<h2 id="power">Power<a href="#power" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>The main block of this design consists of 2 DC-DC nuggets and the main 4-switcher. First there&rsquo;s a dedicated 3V3 rail for the control system, then there&rsquo;s a separate, user accessible 3V3 rail - because honestly, you need this most of the time anyway and here you get a whole 1 amp of it. And this 1 amp is the sane version of what I originally had. I dialled it way back. The first iteration of this had an absolutely monstrous MIC2101 here. Something you might see in a VRM module on an ATX motherboard or a PSU - I mean, 12A for 3V3? What.<br>
+<img src="/img/3v3-ap63200.png" alt="3V3"><br>
+The 3V3 rails are both handled by the humble AP63200. It&rsquo;s low cost and has a compact BOM. The FET is integrated. This means it needs some thermal consideration when doing layout, but in this application, it&rsquo;s not too stressed. This is the 2A variant of the IC which means I can strangle it here a little. This is mostly on the account that only one of these rails is doing real current. That 1 amp of external power needs a bit of care, but the internal 3V3, I&rsquo;ll be amazed if it ever crosses 100 mA of current. The only real power sink on this rail is the GPIO expander that can technically do 25mA per pin, but even loading this up 100% means I&rsquo;m looking at 400mA + whatever the screen and MCU end up using. So on this board, it&rsquo;s only operating at half and a quarter of the capacity, respectively. The only non-standard parts here are the test points, the rest is straight out of the datasheet.
+<img src="/img/lm-block.png" alt="V_ADJ"><br>
+The LM51772 is what handles the adjustable rail. On paper, it is quite beautiful. up to 60V boost, as low as 1V buck and it can do that in 10mV steps (20mV past 20V - gotta double check this). My plan is to make this go from 1V to 30V, but I&rsquo;m sizing the output TVS diodes to match that so that if I wanted, I could theoretically push it to its&rsquo; upper limit in terms of voltage. I&rsquo;ve no idea what I&rsquo;d even use 60V for to be honest. Off the top of my head, I only know one use case for this specific voltage - 12-14S LiPo. Or maybe solar stuff? But 48V is definitely of interest as that is the standard voltage for telecom. Then there&rsquo;s stuff like extended industrial, DC BPL and low voltage EV/hybrid motors. Given the constraints of my input of 100W, this is probably not very useful, but simply having the option is better than nothing. It&rsquo;s like when you don&rsquo;t have a scope on hand, but you have a breadboard with a pico and some resistors on it. If you know roughly what you would be measuring, you can set up the ADC to sample this and log it over UART, then graph it in a spreadsheet. Is it good? No. But you&rsquo;re no longer flying blind either. The current limits for the IC are eh, whatever - you pick. It doesn&rsquo;t include the FETs so whatever you size your switching node to is what you can potentially push - so long as you lay it out right and respect the gate drive capability at your chosen frequency. Pushing past 5A continuous, on a PCB, takes careful deliberation. Control-wise, you have voltage and current control, overcurrent protection and a built in DRV pin to enable/disable the output. And it&rsquo;s driven by I2C, so you save on GPIO. One of the better aspects of this chip is the efficiency at 20V input: 98.5%. You can clearly tell TI aimed this at USB PD. My schematic has a few non-standard parts here. The first thing you&rsquo;ll notice is that there are RC snubbers on the switching node. Given the potential for a transient response of double digit amps per microsecond, this thing has the theoretical capability to mess up even your 3V3 logic that&rsquo;s running nearby, to say nothing about 1V1 stuff, any kind of analog sensing or signal gen. I&rsquo;ve also added test points here with ground vias close by to make measuring with a spring clip easier. The second non-standard thing is, I&rsquo;m using a type 3 compensation loop here to push the performance a bit higher still. This is mainly because this device is meant to work at variable duty cycles so true optimization in the literal sense of the word is impossible. I can design for worst case and hope it doesn&rsquo;t kill the performance in other, more lenient modes. It&rsquo;s a current controlled switcher, too, so it doesn&rsquo;t have the huge double pole at LC, which enables it to reach bandwidth numbers in the double digit kHz even with a poorly matched T2 comp loop, but with a T3 I can hopefully push it to somewhere around 60-80 kHz. The switching frequency on this guy is also controlled via I2C, which opens up potential for further optimization, but that&rsquo;s a firmware thing, I won&rsquo;t worry about that right now. Somewhere in a massive excel file I have the transfer function of this thing with the Bode plots for different values of compensation and the combined Bode plot for the whole loop, but I will go deeper into that in a future post.<br>
+<img src="/img/outputs.png" alt="outputs"><br>
+The final block here is the power output and thermal array. I have a thermistors on each of the major components. The KiCAD net labels are still from the initial design - I had too much of the bus structure already done and I wasn&rsquo;t going to rename them just because I changed the structure a little. I&rsquo;ll do it at a later date.<br>
+And then there&rsquo;s some additional parts here that you wouldn&rsquo;t expect to see on a power supply. This is where the feature creep comes in.<br>
+<img src="/img/out-gpio.png" alt="GPIO output and then some"><br>
+The idea here is basically, well you already have a 3V3 rail dedicated to your digital logic. What else would you want that you usually need but sometimes don&rsquo;t have on hand? Some slow (400kHz) GPIO. And sure, I say it&rsquo;s slow, but that&rsquo;s in comparison to the brains of this machine, or any modern ARM MCU. It&rsquo;s still plenty fast for many many things. And it&rsquo;s actually not <em>that</em> much slower than something like an Arduino Uno.
+<img src="/img/teh-fuk.png" alt="wtf"><br>
+If GPIO is kind of sane then what the actual fuck is this? This is where I lost my mind a little. In hindsight, why is any of this here? The buffered ADC output (seen above), well, it&rsquo;s here because there was an ADC pin free on the MCU. Simple as that. This isn&rsquo;t even that feature-creepy, I mean it&rsquo;s just an extra op-amp, one I already had on the BOM to boot. But why is there a DAC here? The observant will immediately have an answer - because of course it does. Adjustable voltage, adressable GPIO, addressable ADC - the only thing this portable lab multitool is missing is a signal generator. Now to be fair, I can&rsquo;t push it too fast. It depends on SPI. I think I can push like 30 MHz on the RP2040 and the DAC itself should be fine with that too. Given the Nyquist theorem, restrictions of my RP2040 and some applied experience, I can maybe drive a decent sine out of this at 100kHz. Not great - but better than nothing. That said, I&rsquo;m not sure I&rsquo;ll ever even use it. I gave it a power rail that&rsquo;s as solid as it can be. Maybe it&rsquo;ll be useful. It&rsquo;s an AD5621 - a 12 bit DAC from Analog. And I mean, I can&rsquo;t afford power chips from Analog,  but I wanted at least ONE IC from them on this. It&rsquo;s like $4. Probably going to end up being like 10% of the BOM cost (of the PCBA). Odds are I won&rsquo;t even populate the footprints, not on anything other than the first prototype. But the option is there.</p>
+<h2 id="io">I/O<a href="#io" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><img src="/img/keys.png" alt="Buttons"><br>
+Okay so the inputs here are the bits I gave the least amount of thought to. I knew I wanted a rotary knob and I knew I wanted a good pushbutton experience - so I put CherryMX red switches here. It&rsquo;s also got a regular old toggle switch for power (this just pulls the reset pin on the STUSB so it leaves the main power path closed, but leaves the digital logic powered). There&rsquo;s an LCD here - an ILI9341 driven 2.8&quot;, 320x240 color screen with a transistor on the backlight pin (for adjustable brightness). the 320x240 was very deliberate - it&rsquo;s very close to what Doom was originally ran at (320x200). Likewise for the CherryMX switches, like what else are you going to put on a gaming console? Well, a joystick or a more basic d-pad maybe, but that doesn&rsquo;t sit right with me. On top of that, the screens are among the more &ldquo;accessible&rdquo; from AliExpress, they&rsquo;re far better than the SSD1306/1309 OLEDs for resolution, similarly to those there&rsquo;s an SPI driver available and they&rsquo;re just flat out bigger. For a lab tool, this means it&rsquo;s just easier to use.
+Right. From the inputs you might actually find on a power supply, we have two USB Type C ports. Why two, you ask? Wait no, you&rsquo;re not asking, you&rsquo;re smart. You know that a data source will almost never push 100W of power. I know my laptop has fairly powerful type C ports, but I&rsquo;ve never checked exactly what it puts out, but I doubt it&rsquo;ll be pushing anything in the 20V range. Anyway, one is for debugging, programming and the eventual UART UI that I plan for this thing, the other is for power and they&rsquo;re meant to be usable side by side with both plugged in.</p>
+<h2 id="control">Control<a href="#control" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><img src="/img/mcu.png" alt="MCU"></p>
+<p>The MCU block is the one most resembling a spider web, but it&rsquo;s not really that complicated. It&rsquo;s got all the control signals, all the feedback signals, I2C and SPI. Since I don&rsquo;t have enough pins on the MCU, I&rsquo;ve enlisted the help of some multiplexers and an additional TCA9350 IO expander that has all the non-critical signals on it. I&rsquo;m quite thankful that I can have the input switches and the encoder on dedicated GPIO, because this means these are all interrupt-enabled and that allows for some cool things, potentially. Some things I thought of adding as extra feature creep, but kept off the board because <del>I&rsquo;m not making a gaming console here</del> they really made no sense: an IMU. A twin axis joystick.
+That basically concludes the system design. This has taken me several months of work, going a few hours a week at most. Full schematics and the KiCAD project will be made public on my github soon-ish. Basically as soon as I verify that it actually works, I wouldn&rsquo;t want to lead anyone into citing this as being true.<br>
+Firmware architecture coming up next. Given that we&rsquo;re halfway through the fall semester, it might take me a while, but I want to document nuggets of information here and there. That means I should also post every now and then.</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+    
+      <a href="//localhost:1313/posts/i2c-electric-boogaloo/" class="button inline next">
+         [<span class="button__text">I2C 2 - Electric Boogaloo</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

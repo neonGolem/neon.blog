@@ -6,8 +6,15 @@
     <description>Recent content on neon•Golem</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Sep 2025 23:07:32 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 05 Oct 2025 22:36:39 +0300</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Feature creep, the project. neon.Volt system design.</title>
+      <link>//localhost:1313/posts/neon-volt-system/</link>
+      <pubDate>Sun, 05 Oct 2025 22:36:39 +0300</pubDate>
+      <guid>//localhost:1313/posts/neon-volt-system/</guid>
+      <description>&lt;h1 id=&#34;neonvolt---so-what-is-it&#34;&gt;neon.Volt - so what is it?&lt;/h1&gt;&#xA;&lt;p&gt;What is your favorite electronic gadget? I&amp;rsquo;m willing to put money on it being something like your phone or your iPad. If you think yourself clever, you might say an Arduino or something. As for me? It&amp;rsquo;s the power brick for my Steam Deck (followed closely by the Deck itself, I mean it&amp;rsquo;s basically a cyberdeck, but in contrast to the hobbyist ones you see, it&amp;rsquo;s actually good).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>I2C 2 - Electric Boogaloo</title>
       <link>//localhost:1313/posts/i2c-electric-boogaloo/</link>
