@@ -1,21 +1,20 @@
 +++
-title = "Feature creep, the project. neon.Volt system design."
-date = "2025-10-05T22:36:39+03:00"
+title = "Feature creep, the project."
+date = "2025-10-12T22:36:39+03:00"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting
-author = ""
-tags = ["system design", "neon.volt"]
+author = "neon.M@ks"
+tags = ["system design", "neon.volt", "schematics"]
 keywords = ["power", "lab", "tools"]
-description = "neon.Volt system design"
-showFullContent = false
-readingTime = false
-hideComments = false
+description = "neon.Volt schematic review."
 +++
 
 # neon.Volt - so what is it?
 
 What is your favorite electronic gadget? I'm willing to put money on it being something like your phone or your iPad. If you think yourself clever, you might say an Arduino or something. As for me? It's the power brick for my Steam Deck (followed closely by the Deck itself, I mean it's basically a cyberdeck, but in contrast to the hobbyist ones you see, it's actually good).  
-### Why?  
-  I realized this after it became my go to charger for everything. It charges my phone, my tablet, my laptop. It runs my f\*cking pinecil. As long as I had this in my bag, I felt safe.  
+
+# Why?
+
+I realized this after it became my go to charger for everything. It charges my phone, my tablet, my laptop. It runs my f\*cking pinecil. As long as I had this in my bag, I felt safe.  
 As far as specs go, it's perfectly average, which is ideal because that keeps it nice and compact. 45W, 20V 1.5A. It's plenty for almost anything. Much like I mentioned in the intro for this project, I needed a portable, programmable source of power. So uh, let's hack the power brick and make the 45 watts on that thing adjustable. 
 
 # A switcher, not a negotiated passthrough?

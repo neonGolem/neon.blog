@@ -2,11 +2,11 @@
 <html lang="en">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
-    <title>Feature creep, the project. neon.Volt system design. :: neon•Golem</title>
+    <title>Feature creep, the project. :: neon•Golem</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="neon.Volt system design" />
+<meta name="description" content="neon.Volt schematic review." />
 <meta name="keywords" content="power, lab, tools" />
 
   <meta name="robots" content="noodp" />
@@ -71,14 +71,14 @@
   
     <meta name="twitter:site" content="" />
   
-    <meta name="twitter:creator" content="" />
+    <meta name="twitter:creator" content="neon.M@ks" />
 
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Feature creep, the project. neon.Volt system design.">
-<meta property="og:description" content="neon.Volt system design" />
+<meta property="og:title" content="Feature creep, the project.">
+<meta property="og:description" content="neon.Volt schematic review." />
 <meta property="og:url" content="//localhost:1313/posts/neon-volt-system/" />
 <meta property="og:site_name" content="neon•Golem" />
 
@@ -88,7 +88,7 @@
 <meta property="og:image:height" content="627">
 
 
-  <meta property="article:published_time" content="2025-10-05 22:36:39 &#43;0300 EEST" />
+  <meta property="article:published_time" content="2025-10-12 22:36:39 &#43;0300 EEST" />
 
 
 
@@ -173,9 +173,9 @@
     
 <article class="post">
   <h1 class="post-title">
-    <a href="//localhost:1313/posts/neon-volt-system/">Feature creep, the project. neon.Volt system design.</a>
+    <a href="//localhost:1313/posts/neon-volt-system/">Feature creep, the project.</a>
   </h1>
-  <div class="post-meta"><time class="post-date">2025-10-05</time></div>
+  <div class="post-meta"><time class="post-date">2025-10-12</time><span class="post-author">neon.M@ks</span></div>
 
   
     <span class="post-tags">
@@ -183,6 +183,8 @@
       #<a href="//localhost:1313/tags/system-design/">system design</a>&nbsp;
       
       #<a href="//localhost:1313/tags/neon.volt/">neon.volt</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/schematics/">schematics</a>&nbsp;
       
     </span>
   
@@ -194,7 +196,7 @@
   <div class="post-content"><div>
         <h1 id="neonvolt---so-what-is-it">neon.Volt - so what is it?<a href="#neonvolt---so-what-is-it" class="hanchor" ariaLabel="Anchor">#</a> </h1>
 <p>What is your favorite electronic gadget? I&rsquo;m willing to put money on it being something like your phone or your iPad. If you think yourself clever, you might say an Arduino or something. As for me? It&rsquo;s the power brick for my Steam Deck (followed closely by the Deck itself, I mean it&rsquo;s basically a cyberdeck, but in contrast to the hobbyist ones you see, it&rsquo;s actually good).</p>
-<h3 id="why">Why?<a href="#why" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h1 id="why">Why?<a href="#why" class="hanchor" ariaLabel="Anchor">#</a> </h1>
 <p>I realized this after it became my go to charger for everything. It charges my phone, my tablet, my laptop. It runs my f*cking pinecil. As long as I had this in my bag, I felt safe.<br>
 As far as specs go, it&rsquo;s perfectly average, which is ideal because that keeps it nice and compact. 45W, 20V 1.5A. It&rsquo;s plenty for almost anything. Much like I mentioned in the intro for this project, I needed a portable, programmable source of power. So uh, let&rsquo;s hack the power brick and make the 45 watts on that thing adjustable.</p>
 <h1 id="a-switcher-not-a-negotiated-passthrough">A switcher, not a negotiated passthrough?<a href="#a-switcher-not-a-negotiated-passthrough" class="hanchor" ariaLabel="Anchor">#</a> </h1>
