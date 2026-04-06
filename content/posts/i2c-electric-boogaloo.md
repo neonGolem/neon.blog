@@ -41,7 +41,7 @@ int main() {
 }
 ```
 
-The condition for the if statement looks for either \n or \r, which is different between Linux and UNIX. Since my laptop uses \r by default when pressing enter, I need to add that there or the machine would never realise I sent it a string with an endline terminator. 
+The condition for the if statement looks for either \n or \r, which is different between Linux and macOS. Since my laptop uses \r by default when pressing enter, I need to add that there or the machine would never realise I sent it a string with an endline terminator. 
 
 Let's see if it works then, shall we?
 
