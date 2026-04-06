@@ -1,16 +1,16 @@
 +++
-title = "I2C 2 - Electric Boogaloo"
+title = "UART based control"
 date = "2025-09-11T23:07:32+03:00"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting
 author = "neon.M@ks"
-tags = ["volt.OS", "drunken ramblings"]
-keywords = ["placeholder", "i2c", "embedded", "firmware"]
-description = "The actual I2C programming lesson"
+tags = ["volt.OS", "short"]
+keywords = ["placeholder", "uart", "embedded", "firmware"]
+description = "The precursor to the actual I2C programming lesson"
 +++
 
 ## Communication established. Now what?
 
-The last chapter details the pains of getting the silicon to respond to us. What needs to happen next is a two way communication with meaning. Since we're working with a microcontroller, the first step is to establish a communication method that enables us to use the MCU as a bridge and talk to the target in such a way that we don't have to hard-code every single thing. Up til now, I've set it to fire a command at the I2C bus on the push of a button and then report its' findings over UART. The better way of doing this is to have the machine read the from UART, parse the data into a command and argument form, then react accordingly. 
+The last chapter details the pains of getting the silicon to respond to us. What needs to happen next is a two way communication with meaning. Since we're working with a microcontroller, the first step is to establish a communication method that enables us to use the MCU as a bridge and talk to the target in such a way that we don't have to hard-code every single thing. Up til now, I've set it to fire a command at the I2C bus on the push of a button and then report its' findings over UART. The better way of doing this is to have the machine read the input from UART, parse the data into a command and argument form, then react accordingly. 
 
 ## The interpreter
 
