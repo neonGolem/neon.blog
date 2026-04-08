@@ -2,74 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>neon•Golem</title>
-    <link>//localhost:1313/</link>
+    <link>/</link>
     <description>Recent content on neon•Golem</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 12 Oct 2025 22:36:39 +0300</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Feature creep, the project.</title>
-      <link>//localhost:1313/posts/neon-volt-system/</link>
+      <link>/posts/neon-volt-system/</link>
       <pubDate>Sun, 12 Oct 2025 22:36:39 +0300</pubDate>
-      <guid>//localhost:1313/posts/neon-volt-system/</guid>
+      <guid>/posts/neon-volt-system/</guid>
       <description>&lt;h1 id=&#34;neonvolt---so-what-is-it&#34;&gt;neon.Volt - so what is it?&lt;/h1&gt;&#xA;&lt;p&gt;What is your favorite electronic gadget? I&amp;rsquo;m willing to put money on it being something like your phone or your iPad. If you think yourself clever, you might say an Arduino or something. As for me? It&amp;rsquo;s the power brick for my Steam Deck (followed closely by the Deck itself, I mean it&amp;rsquo;s basically a cyberdeck, but in contrast to the hobbyist ones you see, it&amp;rsquo;s actually good).&lt;/p&gt;</description>
     </item>
     <item>
-      <title>I2C 2 - Electric Boogaloo</title>
-      <link>//localhost:1313/posts/i2c-electric-boogaloo/</link>
+      <title>UART based control</title>
+      <link>/posts/i2c-electric-boogaloo/</link>
       <pubDate>Thu, 11 Sep 2025 23:07:32 +0300</pubDate>
-      <guid>//localhost:1313/posts/i2c-electric-boogaloo/</guid>
+      <guid>/posts/i2c-electric-boogaloo/</guid>
       <description>&lt;h2 id=&#34;communication-established-now-what&#34;&gt;Communication established. Now what?&lt;/h2&gt;&#xA;&lt;p&gt;The last chapter details the pains of getting the silicon to respond to us. What needs to happen next is a two way communication with meaning. Since we&amp;rsquo;re working with a microcontroller, the first step is to establish a communication method that enables us to use the MCU as a bridge and talk to the target in such a way that we don&amp;rsquo;t have to hard-code every single thing. Up til now, I&amp;rsquo;ve set it to fire a command at the I2C bus on the push of a button and then report its&amp;rsquo; findings over UART. The better way of doing this is to have the machine read the input from UART, parse the data into a command and argument form, then react accordingly.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The smoke test. Am I still an engineer?</title>
-      <link>//localhost:1313/posts/smoke-test/</link>
+      <link>/posts/smoke-test/</link>
       <pubDate>Sun, 31 Aug 2025 00:52:19 +0300</pubDate>
-      <guid>//localhost:1313/posts/smoke-test/</guid>
+      <guid>/posts/smoke-test/</guid>
       <description>&lt;h2 id=&#34;am-i-still-an-engineer&#34;&gt;Am I still an engineer?&lt;/h2&gt;&#xA;&lt;p&gt;The question itself is pretty wild coming from me, someone working as an engineer, but hear me out. It&amp;rsquo;s been almost a year since I wrote any firmware or did any work on any microcontroller in general. This is then an excellent smoke test - do I still have what it takes? The premise is not too outlandish. Wire up an STUSB4500, tell it to negotiate 5V3A, 9V1.5A  and 15V3A. A month ago, I placed an order with a Chinese manufacturer and received the boards last week. By default the IC does not negotiate 9V - which is incidentally the one I need, because that&amp;rsquo;s what the cheapest big capacity powerbank I chose to use does. For programming the device, I left a 100mil grid of testpoints that I intend to connect to using pogo pins. The 3x2 grid consists of 2 vias in opposing corners, a ground, a power and the I2C pins. Simple enough. An afternoon is all it should take.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello, neon•Volt.</title>
-      <link>//localhost:1313/posts/hello-neon-volt/</link>
+      <link>/posts/hello-neon-volt/</link>
       <pubDate>Tue, 08 Jul 2025 14:10:36 +0300</pubDate>
-      <guid>//localhost:1313/posts/hello-neon-volt/</guid>
-      <description>&lt;h1 id=&#34;neonvolt-what&#34;&gt;neon.Volt? What?&lt;/h1&gt;&#xA;&lt;p&gt;It&amp;rsquo;s a smart power supply that runs off of USB-C, utilises the rev 2 power&#xA;delivery spec and is configurable over UART, but also comes with a physical UI so it&amp;rsquo;s&#xA;usable as a standalone unit. It is my intent to share this design, so I will probably put it&#xA;out there under GPL or something. At the time of me writing this, i&amp;rsquo;m still&#xA;in the middle of finalizing the system design, but I have enough stuff on there that&#xA;the code for this project is going to keep me busy for a while - even if I vibe code&#xA;parts of it. &lt;em&gt;Especially&lt;/em&gt; if i vibe code it.  The short spec sheet is as follows: 100W, 98.5% efficient, 10mV adjustment&#xA;steps, controllable via UART. The reality of the situation though, is&#xA;that I will not be able to guarantee that efficiency and the converter will probably not be&#xA;that precise, especially with cheap leads and high currents. I can&amp;rsquo;t foresee everything that will go wrong with it.&#xA;There&amp;rsquo;s been feature creep. What started out with me adding&#xA;hardware to meet the system specification ended up being &amp;ldquo;hey, if i&amp;rsquo;m doing this anyway,&#xA;I might as well do more of the same&amp;rdquo; and that&amp;rsquo;s how I arrived at a full 16 bit&#xA;user addressable terminal block, a user accessible ADC pin, a dedicated 3V3 rail and an adjustable output of&#xA;1 to 30 volts, a color 320x240 screen and enough flash memory to comfortably run Doom on this thing.&lt;/p&gt;</description>
+      <guid>/posts/hello-neon-volt/</guid>
+      <description>&lt;h1 id=&#34;neonvolt-what&#34;&gt;neon.Volt? What?&lt;/h1&gt;&#xA;&lt;p&gt;It&amp;rsquo;s a portable smart power supply that runs off of USB-C, utilises the rev 2 power&#xA;delivery spec and is configurable over UART, but also comes with physical buttons,  so you can use it&#xA;without a computer. At the time of me writing this, it&amp;rsquo;s still in the system design phase, but I do have a preliminary spec for it and that goes as follows:&#xA;100W total power, 98.5% efficient at 20V input, 10mV adjustment&#xA;steps, controllable via PC command line (so it&amp;rsquo;s scriptable) or via the knobs and keys on the device. I will not be able to guarantee that efficiency and the converter will probably not be&#xA;that precise, especially with cable drop at higher currents. I can&amp;rsquo;t foresee everything that will go wrong with it, but I&amp;rsquo;ll do my best to make it work as best I can.&#xA;There&amp;rsquo;s been feature creep. What started out with me adding&#xA;hardware to meet the system specification ended up being &amp;ldquo;hey, if i&amp;rsquo;m doing this anyway,&#xA;I might as well do more of the same&amp;rdquo; and that&amp;rsquo;s how I arrived at a full 16 bit&#xA;user addressable terminal block, a user accessible ADC and DAC pins, a dedicated 3V3 rail and an adjustable output of&#xA;1 to 48 volts, a color 320x240 screen and enough flash memory to comfortably run Doom on this thing.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A seedling of time</title>
-      <link>//localhost:1313/writing/liminal/</link>
+      <link>/writing/liminal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/writing/liminal/</guid>
+      <guid>/writing/liminal/</guid>
       <description>&lt;p&gt;Theres a stillness in the air. The weather can best be described as sticky. The sun, belting down on me relentlessly. Silence. It feels like time itself has stopped. A faint sound of crows in the distance.&lt;br&gt;&#xA;There it is. Finally found it. I’ve felt this before. I&amp;rsquo;ve been after this for a long time.&lt;br&gt;&#xA;The year is 1996 and I’m about to enter first grade. Except I’m 36, the year is 2025 and it is a Sunday. Both of these are true. Both of these &lt;em&gt;feel&lt;/em&gt; true. It’s as if I’ve stepped through the fold, crossed the veil, to a bygone era. It feels like a lifetime ago. I can feel the weight of these years, all of it, at once.&lt;br&gt;&#xA;I stare down an empty parking lot, watching the heat haze wave about in the air. I’m basking in this sensation, I&amp;rsquo;m absorbing it. It is a strange feeling of nostalgia. One that isn’t tied to a specific memory, but to the &lt;em&gt;texture of existence itself&lt;/em&gt;. I’ve been here before. I’ve felt this in the past. The commie blocks. The cracks in the pavement. The trees to the side, stretching their roots into the concrete, bulging, cracking, forcing their way through.&lt;br&gt;&#xA;The stillness. The crushing stillness that somehow inspires comfort. It invokes emptiness yet familiarity. It makes you feel like you’re alone in the world, yet it feels cozy. Like watching hand drawn anime on a VHS tape.&lt;br&gt;&#xA;A temporal shift. Two realities colliding, bleeding into one another, meshing and fusing into one.  It is the emptiness of the moment that gives it this liminal feeling. On the boundary of time itself, neither here nor there. This feeling, this rift in time and space, it holds endless potential. A seedling.&lt;br&gt;&#xA;Could I do it?&lt;br&gt;&#xA;A car rolls into the parking lot. The spell is broken. I solidify in reality once more. Damn. This time was close. Too close. So close I could almost touch it. I was almost there.&lt;br&gt;&#xA;Why though? What am I chasing? A second chance maybe? A means to redo everything? All of it?&lt;br&gt;&#xA;I chuckle. I already know the answer. I know exactly how this would pan out. I would painstakingly gouge my deepest memories. I would follow the traces. I would execute the plan to the letter. All of it, exactly the same. All of it, so that I could make the exact same choices. Smoke the exact brand of cigarettes, drink the same beer and take the exact same taxi to the exact same, wrong address. Lose my keys at that very day, crash my bike on the same intersection. I would repeat everything, do it all the same to a tee, all in the hopes of meeting you again, one more time. It was magical. All of it. A second chance? A life lived without regret does not ask for a second chance.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
-      <link>//localhost:1313/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/about/</guid>
+      <guid>/about/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m an electronics engineer with high functioning ADHD and probably some form of autism. This is my project porfolio, not really sure how far I&amp;rsquo;m willing to take it, but right now I feel like I want an outlet like this and I bought the .com so ehh, fuck it.&lt;/p&gt;&#xA;&lt;p&gt;The blog is made in hugo and hosted by cloudflare, the template/theme is Terminal and I&amp;rsquo;ve left much of the references to the original author in place to give credit.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Forgotten gods of Atheros 4</title>
-      <link>//localhost:1313/writing/forgotten_gods/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/writing/forgotten_gods/</guid>
-      <description>&lt;p&gt;The sunset is breathtaking today. A dense fog rises from the moors as the heat of the day dissipates into the crystal clear autumn night. The sky is painted a vibrant orange. The chroma today is a vivid pink – a rare occurrence.&lt;/p&gt;&#xA;&lt;p&gt;Stillness. I stand at the edge of a forest looking down on the lowlands. I wonder if you, too, once saw this. Emerging from the treelines is my silent companion. An ancient skeleton of a creature of impossible size. Looming over the wilderness, this is not the only one. The entire planet is filled with them. They stand guard by the forests, forests no doubt more ancient than themselves. This one takes the shape of a humanoid. Just the torso - it towers above me many, many times my height. The forgotten gods of Atheros 4. Who were they? What happened to them? Why are they all watching over the forests? One thing remains certain. The wildlife avoids their gaze, so this will be my camp for the night. The subconscious tells me to run like hell and not look back. The rational thought in me, however, tells me this is safe. And I am a man of science.&#xA;The fog curls and thickens as the light dies; each breath tastes faintly of cold loam and resin. Under the ribs of that titan, shadows fold like curtains. Its bones are not white so much as the pale grey of weathered stone, threaded with moss and fern that pulse faintly in the last light. The wind from the moors gust, making the vertebrae sing — a low, hollow chord that sounds almost like a language.&#xA;I make camp beneath its chest, a shallow hollow, smelling of sap and moist. A fox pauses at the tree-line before vanishing, tail bouncing above the foliage before disappearing into the darkness. The subconscious prickles: the posture of a thing built to watch is not the posture of a thing that forgets. Yet there is no motion, only the slow settling of the night. Rational thought counts the reasons it’s safe: massive, inert, decayed. The other voice counts the reasons it is not: those who stand still can listen.&#xA;The questions pull at me. Were these guardians built to protect the forests? Or do they intend to keep something in?&lt;br&gt;&#xA;The old one watches with a silence that feels like a held ledger. I crouch beneath its chest and speak the words. “What are you trying to tell me?”&lt;br&gt;&#xA;I do not expect an answer, but the air  itself insists on being addressed. For a time there is nothing but the wind folding over heather.&#xA;When the moss along the sternum moves it does so without hurry: a single, measured swell as if the creature is inhaling centuries. It makes a sound. A soft whisper, more like punctuation rather than a word. The fox at the tree line re-emerges for a second, curious, then becomes a shadow again. I feed the embers with a handful of dry bark and let the light trace the old ribs into black script. The moor is patient. So I wait.&#xA;The old ones as I call them. To study them is my objective. I am not permitted to leave this world until I have answers. These creatures, unnerving as they are, have not interfered with my goals. Their still gaze follows me - this much I can tell. What for? The woods that they guard, they hold no big mystery. There are remnants of a civilization, but it is far newer than they themselves are. If this torso is in fact a whole creature, then half of its’ length is buried beneath. Do i have to dig for what i seek? The thought fills me with dread. Unnatural dread. It is almost as if this is how the old ones talk. They breathe as the wind plays with the decay and the appendages of nature attempting to reclaim them. On the outside, there is nothing but stillness. This realm is inviting, it holds an abundance of resources, the woods have sustained me for the long weeks and months that I’ve roamed them. Yet I cannot shake the feeling that all of this is wrong This world of Atheros 4 is entirely too quiet. Too perfect, too accommodating, too eerie. It is uncanny. Do they communicate through emotion? But this would imply things. That they know what I’m after. I am being steered, clearly. But where to? How do they expect me to react? I look up at my silent companion. Indeed, what are you trying to tell me?&#xA;No matter. I have become part of the system that the old ones operate. My curiosity is a variable. The system adjusts. The night is long.&lt;br&gt;&#xA;I awake before dawn with a strange satisfaction and pack up camp. This world is vast and full of opportunity.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>neon.Volt</title>
-      <link>//localhost:1313/showcase/neon.volt/</link>
+      <link>/showcase/neon.volt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/showcase/neon.volt/</guid>
-      <description>&lt;p&gt;You need good lab tools. Good tools are expensive. So we approach the problem the maker way and we create the tools that we need. It&amp;rsquo;s a smart power supply built around the USB-C PD spec and a buck-boost switcher.&lt;/p&gt;&#xA;&lt;p&gt;Relevant posts:&lt;/p&gt;&#xA;&lt;p&gt;   (07.08.2025) &lt;a href=&#34;//localhost:1313/posts/hello-neon-volt/&#34;&gt;Hello, neon.Volt.&lt;/a&gt;&lt;/p&gt;</description>
+      <guid>/showcase/neon.volt/</guid>
+      <description>&lt;p&gt;You need good lab tools. Good tools are expensive. So we approach the problem the maker way and we create the tools that we need. It&amp;rsquo;s a smart power supply built around the USB-C PD spec and a buck-boost switcher.&lt;/p&gt;&#xA;&lt;p&gt;Relevant posts:&lt;/p&gt;&#xA;&lt;p&gt;   (07.08.2025) &lt;a href=&#34;/posts/hello-neon-volt/&#34;&gt;Hello, neon.Volt.&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>volt.OS</title>
-      <link>//localhost:1313/showcase/volt.os/</link>
+      <link>/showcase/volt.os/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/showcase/volt.os/</guid>
-      <description>&lt;p&gt;The firmware for the power supply is going to be fairly complex in the sense that I have a lot of features on the board. The main issue is the user addressable IO and ADC pin. A custom interpreter is the way to go here, but I have no good idea on how to even approach this.&lt;/p&gt;&#xA;&lt;p&gt;   (07.08.2025) &lt;a href=&#34;//localhost:1313/posts/smoke-test/&#34;&gt;The smoke test. Am I still an engineer?&lt;/a&gt;&lt;br&gt;&#xA;   (07.08.2025) &lt;a href=&#34;//localhost:1313/posts/i2c-electric-boogaloo/&#34;&gt;I2C 2 - Electric Boogaloo.&lt;/a&gt;&lt;/p&gt;</description>
+      <guid>/showcase/volt.os/</guid>
+      <description>&lt;p&gt;The firmware for the power supply is going to be fairly complex in the sense that I have a lot of features on the board. The main issue is the user addressable IO and ADC pin. A custom interpreter is the way to go here, but I have no good idea on how to even approach this.&lt;/p&gt;&#xA;&lt;p&gt;   (07.08.2025) &lt;a href=&#34;/posts/smoke-test/&#34;&gt;The smoke test. Am I still an engineer?&lt;/a&gt;&lt;br&gt;&#xA;   (07.08.2025) &lt;a href=&#34;/posts/i2c-electric-boogaloo/&#34;&gt;I2C 2 - Electric Boogaloo.&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
